@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <data>
+
+
+        <variable
+            name="data"
+            type="project.android.shoponlineproject.view.viewmodel.CommentViewModel" />
+    </data>
+
+
+
+
+<RelativeLayout
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+      android:layoutDirection="rtl"
+    tools:context=".view.actvity.CommentActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar_comment"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:background="@color/colorPrimary">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:fontFamily="@font/iran"
+                android:textSize="16dp"
+                android:textColor="#fff"
+                android:layout_centerVertical="true"
+                android:text="نظر کاربران"/>
+        </RelativeLayout>
+
+    </androidx.appcompat.widget.Toolbar>
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewComment"
+        android:layout_width="match_parent"
+        android:background="@drawable/profile"
+        android:layout_height="match_parent"
+        app:stackFromEnd="true"
+        android:layout_below="@id/toolbar_comment"
+        app:reverseLayout="true"
+        android:layout_above="@+id/line_two"
+        android:layout_marginBottom="0dp"></androidx.recyclerview.widget.RecyclerView>
+
+    <LinearLayout
+            android:id="@+id/line_two"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+             android:layoutDirection="rtl"
+             android:layout_alignParentBottom="true"
+
+            android:background="#b4e4d2"
+            android:orientation="horizontal"
+            android:weightSum="1"
+            >
+        <Button
+            android:id="@+id/btn_input"
+            android:onClick="@{data::setComment}"
+
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+
+            android:background="@drawable/send"
+            android:layoutDirection="rtl"
+            android:gravity="right" />
+            <EditText
+                android:id="@+id/input_edit"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:layout_weight="0.95"
+                android:text="@={data.EnterComment}"
+
+                android:layoutDirection="rtl"
+                android:hint="Input Detail" />
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="0.05">
+
+
+            </RelativeLayout>
+
+
+        </LinearLayout>
+
+</RelativeLayout>
+</layout>

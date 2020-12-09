@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_height="wrap_content">
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_marginTop="7dp"
+        android:layout_height="48dp"
+        tools:ignore="MissingConstraints">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="6dp"
+            android:layout_marginBottom="6dp"
+            android:orientation="horizontal">
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/btn_main_horizontal"
+                android:layout_marginRight="@dimen/main_margin_Button"
+                android:layout_marginLeft="@dimen/main_margin_Button"
+                android:textColor="#fff"
+                android:fontFamily="@font/font"
+                android:text="  لب تاب  "></Button>
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/btn_main_horizontal"
+                android:layout_marginRight="@dimen/main_margin_Button"
+                android:layout_marginLeft="@dimen/main_margin_Button"
+                android:fontFamily="@font/font"
+                android:textColor="#fff"
+                android:text="   موبایل   "></Button>
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/btn_main_horizontal"
+                android:layout_marginRight="@dimen/main_margin_Button"
+                android:layout_marginLeft="@dimen/main_margin_Button"
+                android:fontFamily="@font/font"
+                android:textColor="#fff"
+                android:text="   مواد غذایی   "></Button>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/btn_main_horizontal"
+                android:layout_marginRight="@dimen/main_margin_Button"
+                android:layout_marginLeft="@dimen/main_margin_Button"
+                android:fontFamily="@font/font"
+                android:textColor="#fff"
+                android:text="   اسباب خانه   "></Button>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/btn_main_horizontal"
+                android:layout_marginRight="@dimen/main_margin_Button"
+                android:layout_marginLeft="@dimen/main_margin_Button"
+                android:fontFamily="@font/font"
+                android:textColor="#fff"
+                android:text="   پرفروش ترین ها   "></Button>
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/main_margin_Button"
+                android:layout_marginLeft="@dimen/main_margin_Button"
+                android:background="@drawable/btn_main_horizontal"
+                android:fontFamily="@font/font"
+                android:textColor="#fff"
+                android:text="   براساس قیمت   "></Button>
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/btn_main_horizontal"
+                android:textColor="#fff"
+                android:layout_marginRight="@dimen/main_margin_Button"
+                android:fontFamily="@font/font"
+                android:layout_marginLeft="@dimen/main_margin_Button"
+                android:text="  اجناس ایرانی   "></Button>
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/btn_main_horizontal"
+                android:textColor="#fff"
+                android:layout_marginRight="@dimen/main_margin_Button"
+                android:layout_marginLeft="@dimen/main_margin_Button"
+                android:fontFamily="@font/font"
+                android:text="  میوه   "></Button>
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/btn_main_horizontal"
+                android:textColor="#fff"
+                android:layout_marginRight="@dimen/main_margin_Button"
+                android:layout_marginLeft="@dimen/main_margin_Button"
+                android:fontFamily="@font/font"
+                android:text="  مواد شوینده   "></Button>
+        </LinearLayout>
+    </HorizontalScrollView>
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layoutDirection="rtl"
+    android:orientation="vertical">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="محصولات پرفروش"
+            android:textStyle="bold"
+            android:fontFamily="@font/iran"
+            android:textDirection="rtl"
+            android:textSize="16sp"
+            android:layout_marginRight="10dp"
+            android:textColor="@color/colorPrimaryDark"
+            android:layout_marginLeft="10dp"
+            android:id="@+id/Iran"/>
+    </RelativeLayout>
+</LinearLayout>
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:id="@+id/layoutRelative"
+        android:foreground="@drawable/mat"
+        android:scaleType="fitXY"
+        android:layout_height="match_parent"></ImageView>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="-90dp"
+
+        tools:layout_editor_absoluteX="62dp"
+        tools:layout_editor_absoluteY="0dp">
+
+
+        <TextView
+            android:id="@+id/name_titel"
+            android:layout_width="wrap_content"
+            android:layout_height="23dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="672dp"
+            android:gravity="center"
+            android:text="name_titel"
+            android:textColor="#fff"
+            android:textSize="20dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.457"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/name_artist"
+            app:layout_constraintVertical_bias="0.176" />
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/circul_artist"
+            android:layout_width="300dp"
+            android:layout_height="300dp"
+
+            android:layout_centerHorizontal="true"
+            android:layout_marginStart="8dp"
+
+            android:layout_marginTop="8dp"
+
+
+            android:layout_marginEnd="8dp"
+
+            android:layout_marginBottom="8dp"
+            app:civ_border_color="#131212"
+            app:civ_border_width="3dp"
+
+
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.373"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/name_titel"
+
+            app:layout_constraintVertical_bias="0.138" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:background="@drawable/back_menu_music"
+            android:orientation="vertical"
+            android:padding="5dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.929"
+            tools:ignore="MissingConstraints">
+
+            <SeekBar
+                android:id="@+id/seekbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_above="@id/endtime"
+                android:layout_marginLeft="15dp"
+                android:layout_marginEnd="15dp"
+
+                android:max="100"
+                android:maxHeight="3dp"
+                android:minHeight="3dp"
+                android:progressDrawable="@drawable/customseekbar"
+                android:thumbTint="#ccaf0e26" />
+
+            //for text
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal"
+                android:weightSum="1">
+
+                <RelativeLayout
+                    android:layout_width="91dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:layout_weight="0.5">
+
+                    <TextView
+                        android:id="@+id/starttime"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+
+                        android:layout_alignParentStart="true"
+
+                        android:text="00:00"
+                        android:textColor="#100F0F" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="15dp"
+                    android:layout_weight="0.5">
+
+                    <TextView
+                        android:id="@+id/endtime"
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+
+
+                        android:text="00:00"
+                        android:textColor="#100F0F"
+
+                        />
+                </RelativeLayout>
+            </LinearLayout>
+
+
+            //for button
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+
+                android:layout_marginTop="15dp"
+                android:orientation="horizontal"
+
+                android:weightSum="3">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="right">
+
+                    <Button
+                        android:id="@+id/btn_back"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+
+                        android:background="@drawable/previous"></Button>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center">
+
+                    <Button
+                        android:id="@+id/btn_play"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+
+
+                        android:background="@drawable/play_button"></Button>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="left">
+
+                    <Button
+                        android:id="@+id/btn_next"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_marginEnd="15dp"
+
+
+                        android:background="@drawable/next" />
+                </RelativeLayout>
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</RelativeLayout>

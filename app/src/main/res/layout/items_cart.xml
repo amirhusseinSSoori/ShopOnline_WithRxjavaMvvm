@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data>
+        <variable
+            name="data"
+            type="project.android.shoponlineproject.model.Buy" />
+    </data>
+    <androidx.cardview.widget.CardView
+
+        android:layout_margin="10dp"
+        android:layoutDirection="rtl"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+
+        app:cardCornerRadius="10dp">
+        <RelativeLayout
+            android:layout_width="match_parent"
+
+            android:layout_height="150dp">
+            <ImageView
+                android:id="@+id/Im_post"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:padding="20dp" />
+
+            <TextView
+                android:id="@+id/Tv_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@+id/Im_post"
+                android:fontFamily="@font/iran"
+                android:gravity="center"
+
+                android:textSize="16dp"
+                android:lineSpacingExtra="8dp"
+                />
+
+            <TextView
+                android:id="@+id/Tv_price"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@+id/Im_post"
+                android:layout_marginTop="20dp"
+                android:textColor="#2ECC71"
+                android:text="price"
+                android:layout_marginLeft="20dp"
+                android:textAlignment="textStart"
+                android:layout_below="@+id/Tv_title"
+                android:fontFamily="@font/iran" />
+
+            <LinearLayout
+                android:layout_alignParentBottom="true"
+                android:id="@+id/linear_btn"
+                android:layout_marginBottom="25dp"
+                android:layout_toEndOf="@+id/Im_post"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center">
+
+                <ImageView
+                    android:id="@+id/Im_mosbat"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:src="@drawable/plus"
+                    android:foreground="?android:attr/selectableItemBackgroundBorderless"
+                    />
+
+                <TextView
+                    android:id="@+id/Tv_count"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginRight="25dp"/>
+
+                <ImageView
+                    android:id="@+id/Im_mines"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:src="@drawable/minus"
+                    android:foreground="?android:attr/selectableItemBackgroundBorderless"
+                    />
+
+            </LinearLayout>
+
+
+
+        </RelativeLayout>
+        <Button
+            android:id="@+id/Btn_Del"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:background="@color/Jazzberry_jam"
+            android:textSize="16dp"
+            android:textColor="#fff"
+            android:text="حذف کردن محصول">
+
+        </Button>
+    </androidx.cardview.widget.CardView>
+</layout>

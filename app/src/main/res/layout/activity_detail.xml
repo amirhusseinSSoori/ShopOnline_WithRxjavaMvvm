@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <data>
+
+        <variable
+            name="Detail"
+            type="project.android.ecommers.model.Post" />
+
+
+
+
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layoutDirection="rtl">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar_Details"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:background="@color/colorPrimary">
+
+        </androidx.appcompat.widget.Toolbar>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/Btn_cartadd"
+            android:layout_below="@+id/toolbar_Details"
+            android:layout_marginTop="0dp"
+            android:layout_marginBottom="0dp"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp">
+
+                    <androidx.viewpager.widget.ViewPager
+                        android:id="@+id/viewpager_slider"
+                        android:layout_width="match_parent"
+                        android:layout_height="200dp" />
+
+                    <me.relex.circleindicator.CircleIndicator
+                        android:id="@+id/indicator"
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp"
+                        android:layout_alignParentBottom="true"></me.relex.circleindicator.CircleIndicator>
+
+                </RelativeLayout>
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/iran"
+                    android:layout_marginBottom="10dp"
+                    android:text="@{Detail.name}"></TextView>
+                <ImageButton
+                    android:id="@+id/btn_like"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:background="@drawable/heart"></ImageButton>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:weightSum="2"
+                    android:padding="2dp"
+                    android:orientation="horizontal">
+
+
+                        <Button
+                            android:id="@+id/btn_one"
+                            android:background="@color/colorPrimaryDark"
+                            android:textColor="#fff"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:fontFamily="@font/iran"
+                            android:text="مشخصات"
+                            android:layout_margin="2dp"
+                            android:layout_weight="1"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintVertical_bias="1.0"
+                            tools:ignore="MissingConstraints"></Button>
+                        <Button
+                            android:id="@+id/btn_two"
+                            android:layout_margin="2dp"
+                            android:background="@color/colorPrimaryDark"
+                             android:textColor="#fff"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:fontFamily="@font/iran"
+                            android:layout_weight="1"
+                            android:text="نظر کاربران"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintVertical_bias="1.0"
+                            tools:ignore="MissingConstraints"></Button>
+
+
+
+                </LinearLayout>
+
+
+                <TextView
+                    android:id="@+id/Tv_des"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:fontFamily="@font/iran"
+                    android:lineSpacingExtra="8dp"
+                    android:padding="5dp"
+                    android:text="@{Detail.description}"
+                    android:textSize="16dp">
+
+                </TextView>
+
+
+            </LinearLayout>
+
+        </ScrollView>
+
+        <Button
+            android:id="@+id/Btn_cartadd"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:layout_alignParentBottom="true"
+            android:background="#1ABC9C"
+            android:fontFamily="@font/iran"
+            android:textColor="#fff"
+
+            android:textSize="20dp" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:fontFamily="@font/iran"
+                android:text="@{Detail.name}"
+                android:textColor="#fff"
+                android:textSize="16dp" />
+        </RelativeLayout>
+
+    </RelativeLayout>
+</layout>

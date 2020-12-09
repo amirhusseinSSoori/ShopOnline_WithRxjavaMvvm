@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable
+            name="viewmodel"
+            type="project.android.shoponlineproject.view.viewmodel.RegisterVieModel" />
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layoutDirection="rtl"
+        tools:context=".View.activity.Login_Activity"
+        android:background="@drawable/profile">
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:background="@color/colorPrimary">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#fff"
+                    android:fontFamily="@font/iran"
+                    android:textSize="16dp"
+                    android:layout_centerVertical="true"
+                    android:text="ثبت نام"/>
+            </RelativeLayout>
+
+        </androidx.appcompat.widget.Toolbar>
+
+        <LinearLayout
+            android:layout_centerVertical="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_margin="20dp"
+            >
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_gravity="center"
+                android:layout_height="wrap_content">
+
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/setimageProfile"
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:src="@drawable/user"
+                    app:civ_border_color="#FF000000"
+                    app:civ_border_width="2dp">
+
+
+                </de.hdodenhof.circleimageview.CircleImageView>
+
+                <ImageButton
+                    android:id="@+id/pic_image"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_below="@id/setimageProfile"
+
+                    android:layout_marginTop="-30dp"
+                    android:background="@drawable/ic_move_to_inbox"></ImageButton>
+            </RelativeLayout>
+
+
+
+
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/iran"
+                android:padding="10dp"
+                android:layout_marginTop="10dp"
+                android:text="@={viewmodel.name}"
+                android:background="@drawable/edit_back_ground"
+                android:hint="نام خود را وارد کنید...">
+
+            </EditText>
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/iran"
+                android:padding="10dp"
+                android:inputType="phone"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/edit_back_ground"
+                android:text="@={viewmodel.mobile}"
+                android:hint="شماره موبایل را وارد کنید...">
+
+            </EditText>
+            <TextView
+                  android:id="@+id/txt_valid_email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="#FF0606"
+                android:visibility="gone"
+                android:text="Please Enter Valid Email Address"></TextView>
+            <EditText
+                android:id="@+id/edit_email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/iran"
+                android:padding="10dp"
+                android:layout_marginTop="10dp"
+                android:inputType="textEmailAddress"
+                android:background="@drawable/edit_back_ground"
+                android:text="@={viewmodel.email}"
+                android:hint="ایمیل خود را وارد کنید...">
+
+            </EditText>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/iran"
+                android:padding="10dp"
+                android:layout_marginTop="10dp"
+                android:inputType="textPassword"
+                android:background="@drawable/edit_back_ground"
+                android:text="@={viewmodel.password}"
+                android:hint="رمز عبور خود را وارد کنید...">
+
+            </EditText>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:fontFamily="@font/iran"
+                android:padding="10dp"
+                android:background="@drawable/btn_blue"
+                android:layout_marginTop="10dp"
+                android:text="ثبت نام"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:textColor="@color/text_white"
+                android:onClick="@{viewmodel::GetRegister}"/>
+
+        </LinearLayout>
+
+
+
+    </RelativeLayout>
+
+</layout>

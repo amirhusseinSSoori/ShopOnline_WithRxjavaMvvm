@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+<group android:checkableBehavior="single">
+  <item
+      android:id="@+id/nav_home"
+      android:title="@string/home"
+      android:icon="@drawable/ic_baseline"></item>
+    <item
+        android:id="@+id/nav_Login"
+        android:title="@string/Login"
+        android:icon="@drawable/profile_account"></item>
+    <item
+        android:id="@+id/nav_sendEmail"
+        android:title="send Email"
+        android:icon="@drawable/ic_email"></item>
+    <item
+        android:id="@+id/nav_draft"
+        android:title="Draft"
+        android:icon="@drawable/ic_drafts"></item>
+
+    <item
+        android:id="@+id/sub_header"
+        android:title="SubHeader">
+    <menu>
+        <item
+            android:id="@+id/nav_all_email"
+            android:title="email"
+            android:icon="@drawable/ic_email"></item>
+        <item
+            android:id="@+id/nav_trash"
+            android:title="trash"
+            android:icon="@drawable/ic_delete"></item>
+        <item
+            android:id="@+id/nav_spam"
+            android:title="spam"
+            android:icon="@drawable/ic_info"></item>
+
+
+    </menu>
+
+
+
+
+    </item>
+
+    </group>
+</menu>

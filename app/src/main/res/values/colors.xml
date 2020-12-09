@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#E91E63</color>
+    <color name="colorPrimaryDark">#C2185B</color>
+    <color name="colorAccent">#F06292</color>
+    <color name="colorPrimary_Half">#66E91E63</color>
+
+
+    <color name="comment_part1">#66C2185B</color>
+    <color name="comment_part2">#CCF06292</color>
+
+    <color name="colorAccent_fasion">#66F06292</color>
+    <color name="card1_main">#CCD32F2F</color>
+    <color name="card2_main">#CCFF5252</color>
+    <color name="main1">#40D81B60</color>
+    <color name="main2">#CCAB47BC</color>
+    <color name="Sapphair">#003ED3</color>
+    <color name="text_white">#fff</color>
+    <color name="Jazzberry_jam">#FF4081</color>
+    <color name="persainindigo">#32127A</color>
+    <color name="Purple">#283593</color>
+</resources>

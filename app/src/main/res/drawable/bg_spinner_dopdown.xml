@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+
+        <layer-list>
+
+            <item>
+                <shape>
+
+                    <gradient android:angle="90" android:endColor="@android:color/transparent" android:startColor="@android:color/transparent" android:type="linear"
+
+                        ></gradient>
+
+                </shape>
+
+
+            </item>
+
+            <item
+
+
+                android:drawable="@drawable/ic_arrow_drop_down" android:gravity="right|center_vertical">
+
+
+            </item>
+
+        </layer-list>
+
+
+    </item>
+</selector>

@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">ShopOnlineProject</string>
+    <string name="star">star</string>
+    <string name="open">OPEN</string>
+    <string name="close">CLOSE</string>
+    <string name="home">Home</string>
+    <string name="Login">login</string>
+</resources>

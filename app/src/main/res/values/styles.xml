@@ -1,0 +1,43 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="AppTheme.Base">
+        <!-- Customize your theme here. -->
+
+
+    </style>
+    <style name="ToolbarTheme" parent="@style/ThemeOverlay.AppCompat.ActionBar">
+        <!-- Customize color of navigation drawer icon and back arrow -->
+        <item name="colorControlNormal">#fff</item>
+    </style>
+    <style name="PopTheme" parent="Theme.AppCompat.Light">
+
+        <item name="android:background">@color/colorAccent</item>
+        <item name="android:popupBackground">@android:color/white</item>
+        <item name="android:textColor">#FFFF00</item>
+    </style>
+
+    <style name="AppTheme.Base" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <!--        <item name="android:popupMenuStyle">@style/PopTheme</item>-->
+
+        <item name="drawerArrowStyle">@style/DrawerArrowStyle</item>
+        <item name="android:navigationBarColor">@color/colorPrimary</item>
+        <item name="actionOverflowButtonStyle">@style/MyOverflowButtonStyle</item>
+
+    </style>
+    <style name="DrawerArrowStyle" parent="Widget.AppCompat.DrawerArrowToggle">
+        <item name="color">@android:color/white</item>
+    </style>
+    <style name="MyOverflowButtonStyle" parent="Widget.AppCompat.ActionButton.Overflow">
+        <item name="android:tint">@android:color/white</item>
+    </style>
+
+    <style name="SpinnerDropDown" parent="Widget.AppCompat.Spinner">
+
+        <item name="android:background">@drawable/bg_spinner_dopdown</item>
+
+    </style>
+</resources>

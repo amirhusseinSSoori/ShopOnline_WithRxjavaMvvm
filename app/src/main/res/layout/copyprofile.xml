@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable
+            name="data"
+            type="project.android.ecommers.model.ProfileModel" />
+    </data>
+   <androidx.constraintlayout.widget.ConstraintLayout
+       android:layout_width="match_parent"
+       android:layout_height="match_parent"
+       android:background="@drawable/backuiprofile">
+
+       <de.hdodenhof.circleimageview.CircleImageView
+           android:id="@+id/imageProfile"
+           android:layout_width="150dp"
+           android:layout_height="150dp"
+           app:civ_border_color="#020202"
+           app:civ_border_width="3dp"
+           android:scaleType="fitXY"
+           app:layout_constraintBottom_toBottomOf="parent"
+           app:layout_constraintEnd_toEndOf="parent"
+           app:layout_constraintHorizontal_bias="0.459"
+           app:layout_constraintStart_toStartOf="parent"
+           app:layout_constraintTop_toTopOf="parent"
+           app:layout_constraintVertical_bias="0.323"
+           tools:ignore="MissingConstraints"></de.hdodenhof.circleimageview.CircleImageView>
+
+
+       <LinearLayout
+           android:id="@+id/linearLayout2"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:layout_marginTop="204dp"
+           android:orientation="horizontal"
+           app:layout_constraintBottom_toBottomOf="parent"
+           app:layout_constraintEnd_toEndOf="parent"
+           app:layout_constraintHorizontal_bias="0.0"
+           app:layout_constraintStart_toStartOf="parent"
+           app:layout_constraintTop_toBottomOf="@+id/imageProfile"
+           app:layout_constraintVertical_bias="0.0"
+           tools:ignore="MissingConstraints">
+
+           <TextView
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_marginStart="30dp"
+               android:font="@font/ebgaramond_variablefont_wght"
+               android:text="FullName : "
+               android:textColor="@color/colorPrimary"></TextView>
+
+
+           <TextView
+
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:font="@font/ebgaramond_variablefont_wght"
+               android:text="@{data.name}"></TextView>
+       </LinearLayout>
+       //for email
+
+       <LinearLayout
+           android:id="@+id/linearLayout3"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+
+           android:layout_marginTop="28dp"
+           android:orientation="horizontal"
+           app:layout_constraintBottom_toBottomOf="parent"
+           app:layout_constraintEnd_toEndOf="parent"
+           app:layout_constraintHorizontal_bias="0.0"
+           app:layout_constraintStart_toStartOf="parent"
+           app:layout_constraintTop_toBottomOf="@+id/linearLayout2"
+           app:layout_constraintVertical_bias="0.0"
+           tools:ignore="MissingConstraints">
+
+           <TextView
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_marginStart="30dp"
+               android:font="@font/ebgaramond_variablefont_wght"
+               android:text="Email : "
+               android:textColor="@color/colorPrimary"></TextView>
+
+
+           <TextView
+
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:font="@font/ebgaramond_variablefont_wght"
+               android:text="@{data.email}"></TextView>
+       </LinearLayout>
+
+
+       //for phone
+
+       <LinearLayout
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+
+           android:orientation="horizontal"
+           app:layout_constraintBottom_toBottomOf="parent"
+           app:layout_constraintEnd_toEndOf="parent"
+           app:layout_constraintHorizontal_bias="0.0"
+           app:layout_constraintStart_toStartOf="parent"
+           app:layout_constraintTop_toBottomOf="@+id/linearLayout3"
+           app:layout_constraintVertical_bias="0.269"
+           tools:ignore="MissingConstraints">
+
+           <TextView
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_marginStart="30dp"
+               android:font="@font/ebgaramond_variablefont_wght"
+               android:text="Phone : "
+               android:textColor="@color/colorPrimary"></TextView>
+
+
+           <TextView
+
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:font="@font/ebgaramond_variablefont_wght"
+               android:text="@{data.mobile}"></TextView>
+       </LinearLayout>
+   </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
